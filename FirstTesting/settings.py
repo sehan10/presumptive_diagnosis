@@ -26,7 +26,7 @@ SECRET_KEY = 'k&t8a15(^8m3a6fwzytyn*+x#=2*0-5j)-v)e=e1#0o(g=z_t5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'backend-sehan.herokuapp.com']
+ALLOWED_HOSTS = [u'presumptivediagnosis.herokuapp.com']
 
 
 # Application definition
