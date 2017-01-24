@@ -36,11 +36,12 @@ urlpatterns = [
 	#Show Decision Tree Pages #
 	url(r'^DecisionTree/Prediction',userInformation.views.responseTodt, name='responseToDecisionTree'),
     url(r'^DecisionTree', userInformation.views.decisionTree),
-	#Show Combo Page #
+	#Show Combo Pages #
+	url(r'^Combo/Prediction', views.response_combo, name='responseToCombo'),
 	url(r'^Combo', userInformation.views.Combo),
 	
     # url(r'^RandomForest/Prediction', views.responseTorf, name='responsetorf'),
-    #url(r'^DecisionTree/Prediction', userInformation.views.responseTodt, name='responseToDecisionTree'),
-    # url(r'^Combo/Prediction', views.response_combo, name='responseToCombo'),
+    
+    
     
 ]

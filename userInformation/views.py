@@ -37,9 +37,9 @@ def Combo(request):
     return render(request,'UserInformation/Combo.Html')
 
 #Show Combo response#
-# def response_combo(request):
-#     instance = MethodRepository.MethodRepo.MethodCalling()
-#     accuracy,prediction = instance.respone_Combo(request)
-#     return  render(request, 'UserInformation/Response.html', {'accuracy':accuracy, 'prediction':prediction})
+def response_combo(request):
+    instance = MethodRepository.MethodRepo.MethodCalling()
+    accuracy,prediction = instance.respone_Combo(request)
+    return  render(request, 'UserInformation/Response.html', {'accuracy':accuracy, 'prediction':prediction})
 
 
