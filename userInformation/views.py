@@ -30,8 +30,8 @@ def decisionTree(request):
 # #Show response to DT #
 def responseTodt(request):
      instance = MethodRepository.MethodRepo.MethodCalling()
-     accuracy,prediction = instance.response_ID3(request)
-     return render(request, 'UserInformation/Response.html', {'accuracy':accuracy, 'prediction':prediction})
+    # accuracy,prediction = instance.response_ID3(request)
+     return render(request, 'UserInformation/Response.html')#, {'accuracy':accuracy, 'prediction':prediction})
 # #Show combo Form #
 def Combo(request):
     return render(request,'UserInformation/Combo.Html')
