@@ -1,0 +1,9 @@
+gunicorn==19.6.0
+whitenoise==3.2.3
+Django==1.10.4
+numpy==1.11.3
+pandas==0.18.1
+python-dateutil==2.5.3
+pytz==2016.4
+six==1.10.0
+virtualenv==15.1.0

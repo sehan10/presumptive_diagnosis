@@ -1,0 +1,22 @@
+{% extends 'UserInformation/UserForm_Template.html' %}
+{% block content %}
+    <div class = "container" style="margin-top: 30px">
+
+
+
+
+            <h1>Our Prediction:</h1>
+            <p>According to the data analysis we predict that you have dengue of type
+                <span><strong>{{ prediction }}</strong></span> with accuracy of
+                <span><strong>{{ accuracy }}</strong></span> , it would be better you
+                visit your doctor and have detail check up.
+                Thank you for using our system
+            </p>
+
+
+
+
+
+
+    </div>
+{% endblock %}
