@@ -147,52 +147,52 @@ class MethodCalling:
             accuracy, Predict = instance.execute(attributes)
         return accuracy, prediction
 
-    # def respone_Combo(self, request):
-    #     accuracy, outputs = self.CallingAll(request)
-    #     add = 0
-    #     dividen = 0
-    #     for x in accuracy:
-    #         add += x
-    #         dividen += 1
-    #     accuracy = add / dividen
-    #     # attributes = self.Extract(request)
-    #     # outputs = ['DF', 'DHF2', 'DHF2', 'DHF1']
-    #     classes = ['DF', 'DHF1', 'DHF2', 'DHF3']
-    #     counter = []
-    #
-    #     for iterator1 in classes:
-    #         count = 0
-    #         # Get the count for each memeber of class #
-    #         for iterator2 in outputs:
-    #             if (iterator1 == iterator2):
-    #                 count += 1
-    #                 # Append Append Append #
-    #         counter.append(count)
-    #
-    #     Capture = self.VoteOut(counter)
-    #     return accuracy, classes[Capture]
-    #
-    # def VoteOut(self, counter):
-    #     # Lets get the highest number of the list #
-    #     capture = 0
-    #     for x, y in enumerate(counter):
-    #         # shrink my list on behalf of what i have already taken #
-    #         for trial in range(len(counter) - (x + 1)):
-    #             next = counter[x + (trial + 1)]
-    #             # Compare and capture the position #
-    #             if (y < next):
-    #                 capture = x + 1
-    #
-    #     return capture
-    #
-    # def CallingAll(self, request):
-    #     accu_nb, pre_nb = self.response_NaiveBaye(request)
-    #    # accu_rf, pre_rf = self.response_RandomForest(request)
-    #     accu_dt ,pre_dt= self.response_ID3(request)
-    #     predictions = []
-    #     accuracy = []
-    #     predictions.append(pre_nb)
-    #    # predictions.append(pre_rf)
-    #     accuracy.append(accu_nb)
-    #    # accuracy.append(accu_rf)
-    #     return accuracy, predictions
+    def respone_Combo(self, request):
+        accuracy, outputs = self.CallingAll(request)
+        add = 0
+        dividen = 0
+        for x in accuracy:
+            add += x
+            dividen += 1
+        accuracy = add / dividen
+        # attributes = self.Extract(request)
+        # outputs = ['DF', 'DHF2', 'DHF2', 'DHF1']
+        classes = ['DF', 'DHF1', 'DHF2', 'DHF3']
+        counter = []
+
+        for iterator1 in classes:
+            count = 0
+            # Get the count for each memeber of class #
+            for iterator2 in outputs:
+                if (iterator1 == iterator2):
+                    count += 1
+                    # Append Append Append #
+            counter.append(count)
+
+        Capture = self.VoteOut(counter)
+        return accuracy, classes[Capture]
+
+    def VoteOut(self, counter):
+        # Lets get the highest number of the list #
+        capture = 0
+        for x, y in enumerate(counter):
+            # shrink my list on behalf of what i have already taken #
+            for trial in range(len(counter) - (x + 1)):
+                next = counter[x + (trial + 1)]
+                # Compare and capture the position #
+                if (y < next):
+                    capture = x + 1
+
+        return capture
+
+    def CallingAll(self, request):
+        accu_nb, pre_nb = self.response_NaiveBaye(request)
+       # accu_rf, pre_rf = self.response_RandomForest(request)
+        accu_dt ,pre_dt= self.response_ID3(request)
+        predictions = []
+        accuracy = []
+        predictions.append(pre_nb)
+        predictions.append(pre_dt)
+        accuracy.append(accu_nb)
+        accuracy.append(accu_dt)
+        return accuracy, predictions
