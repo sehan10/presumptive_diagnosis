@@ -1,7 +1,7 @@
 from decimal import *
 
-import  FileReader
-import  Methods
+import FileReader
+import Methods
 
 
 class Execution:

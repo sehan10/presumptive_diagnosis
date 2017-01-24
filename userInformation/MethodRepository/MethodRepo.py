@@ -3,33 +3,63 @@
 #import Exe
 # ID3#
 from userInformation import ID3,Read
+from userInformation import Execute
 #import Read
 
 
 class MethodCalling:
-    # Doing Naive Bayes Thing #
-    # def response_NaiveBaye(self, request):
-    #     attribute = self.Extract(request)
-    #     Instance = Execute.Execution()
-    #     Accuracy, FinalStruct = Instance.excute()
-    #     while (Accuracy < 80):
-    #         Accuracy, FinalStruct = Instance.excute()
-    #     # prediction = Instance.FindUsers(['n', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'n', 'p', 'n', 'n', 'B', 'B', 'A'],FinalStruct)
-    #
-    #     prediction = Instance.FindUsers(attribute, FinalStruct)
-    #     prediction = self.removeBrackets(prediction)
-    #     return Accuracy, prediction
+    def Extract(self, request):
+        Result = []
+        Attributes = []
+        Result.append(Attributes)
+        Attributes.append(request.POST['headache'])
+        Attributes.append(request.POST['ROPain'])
+        Attributes.append(request.POST['JPain'])
+        Attributes.append(request.POST['MPain'])
+        Attributes.append(request.POST['Rash'])
+        Attributes.append(request.POST['Pulse'])
+        Attributes.append(request.POST['BP'])
+        Attributes.append(request.POST['HM'])
+        Attributes.append(request.POST['Igg'])
+        Attributes.append(request.POST['ChestXray'])
+        Attributes.append(request.POST['Ultrasound'])
+        Attributes.append(request.POST['Bleeding'])
+        Attributes.append(request.POST['Tourniquet'])
+        Attributes.append(request.POST['WBC'])
+        Attributes.append(request.POST['Platelet'])
 
-    # Remove brackets from list #
-    # def removeBrackets(self, prediction):
-    #     checklist = [['DF'], ['DHF1'], ['DHF2'], ['DHF3']]
-    #     classes = ['DF', 'DHF1', 'DHF2', 'DHF3']
-    #     i = 0
-    #     for x in checklist:
-    #         if (x == prediction):
-    #             return classes[i]
-    #
-    #         i += 1
+        return Attributes
+
+        # Remove brackets from list #
+
+    def removeBrackets(self, prediction):
+        checklist = [['DF'], ['DHF1'], ['DHF2'], ['DHF3']]
+        classes = ['DF', 'DHF1', 'DHF2', 'DHF3']
+        i = 0
+        for x in checklist:
+            if (x == prediction):
+                return classes[i]
+
+            i += 1
+
+
+    # Doing Naive Bayes Thing #
+    def response_NaiveBaye(self, request):
+        attribute = self.Extract(request)
+        Instance = Execute.Execution()
+        Accuracy, FinalStruct = Instance.excute()
+        while (Accuracy < 80):
+            Accuracy, FinalStruct = Instance.excute()
+        # prediction = Instance.FindUsers(['n', 'n', 'y', 'n', 'y', 'n', 'n', 'n', 'n', 'p', 'n', 'n', 'B', 'B', 'A'],FinalStruct)
+
+        prediction = Instance.FindUsers(attribute, FinalStruct)
+        prediction = self.removeBrackets(prediction)
+        return Accuracy, prediction
+
+
+
+
+
 
     '''
     #Extract the attributes from request #
@@ -53,27 +83,7 @@ class MethodCalling:
         return Attributes
 '''
 
-    def Extract(self, request):
-        Result = []
-        Attributes = []
-        Result.append(Attributes)
-        Attributes.append(request.POST['headache'])
-        Attributes.append(request.POST['ROPain'])
-        Attributes.append(request.POST['JPain'])
-        Attributes.append(request.POST['MPain'])
-        Attributes.append(request.POST['Rash'])
-        Attributes.append(request.POST['Pulse'])
-        Attributes.append(request.POST['BP'])
-        Attributes.append(request.POST['HM'])
-        Attributes.append(request.POST['Igg'])
-        Attributes.append(request.POST['ChestXray'])
-        Attributes.append(request.POST['Ultrasound'])
-        Attributes.append(request.POST['Bleeding'])
-        Attributes.append(request.POST['Tourniquet'])
-        Attributes.append(request.POST['WBC'])
-        Attributes.append(request.POST['Platelet'])
 
-        return Attributes
 
     # Doing Random Forest thing #
 

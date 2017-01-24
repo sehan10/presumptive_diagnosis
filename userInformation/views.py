@@ -8,10 +8,10 @@ def naiveBayes(request):
      return render(request,'UserInformation/NaiveBayes.html')
 #
 # #Show Naive Bayes Result #
-# def responseToNb(request):
-#    instance = MethodRepository.MethodRepo.MethodCalling()
-#    accuracy, prediction=instance.response_NaiveBaye(request)
-#    return render(request,'UserInformation/Response.html',{ 'accuracy':accuracy, 'prediction':prediction })
+def responseToNb(request):
+    instance = MethodRepository.MethodRepo.MethodCalling()
+    accuracy, prediction=instance.response_NaiveBaye(request)
+    return render(request,'UserInformation/Response.html',{ 'accuracy':accuracy, 'prediction':prediction })
 #
 #
 #

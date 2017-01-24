@@ -28,16 +28,17 @@ urlpatterns = [
 	url(r'^Home',Webapp.views.home ),
 	url(r'^AboutUs',Webapp.views.aboutus ),
     url(r'^ContactUs',Webapp.views.contactus),
-	#Show Naive Bayes Page #
+	#Show Naive Bayes Pages #
+	url(r'^NaiveBayes/Prediction', userInformation.views.responseToNb, name='response'),
 	url(r'^NaiveBayes', userInformation.views.naiveBayes),
 	#Show Random Forest Page #
 	url(r'^RandomForest',userInformation.views.randomForest),
-	#Show Decision Tree Page #
+	#Show Decision Tree Pages #
 	url(r'^DecisionTree/Prediction',userInformation.views.responseTodt, name='responseToDecisionTree'),
     url(r'^DecisionTree', userInformation.views.decisionTree),
 	#Show Combo Page #
 	url(r'^Combo', userInformation.views.Combo),
-	#url(r'^NaiveBayes/Prediction', views.responseToNb, name='response'),
+	
     # url(r'^RandomForest/Prediction', views.responseTorf, name='responsetorf'),
     #url(r'^DecisionTree/Prediction', userInformation.views.responseTodt, name='responseToDecisionTree'),
     # url(r'^Combo/Prediction', views.response_combo, name='responseToCombo'),
