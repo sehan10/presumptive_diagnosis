@@ -33,7 +33,7 @@ urlpatterns = [
 	#Show Random Forest Page #
 	url(r'^RandomForest',userInformation.views.randomForest),
 	#Show Decision Tree Page #
-	url(r'^DecisionTree/Prediction', userInformation.views.responseTodt, name='responseToDecisionTree'),
+	url(r'^DecisionTree/Prediction',userInformation.views.decisionTree), #userInformation.views.responseTodt, name='responseToDecisionTree'),
     url(r'^DecisionTree', userInformation.views.decisionTree),
 	#Show Combo Page #
 	url(r'^Combo', userInformation.views.Combo),
