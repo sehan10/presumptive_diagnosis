@@ -37,7 +37,7 @@ urlpatterns = [
 	url(r'^DecisionTree/Prediction',userInformation.views.responseTodt, name='responseToDecisionTree'),
     url(r'^DecisionTree', userInformation.views.decisionTree),
 	#Show Combo Pages #
-	url(r'^Combo/Prediction', views.response_combo, name='responseToCombo'),
+	url(r'^Combo/Prediction', userInformation.views.response_combo, name='responseToCombo'),
 	url(r'^Combo', userInformation.views.Combo),
 	
     # url(r'^RandomForest/Prediction', views.responseTorf, name='responsetorf'),
