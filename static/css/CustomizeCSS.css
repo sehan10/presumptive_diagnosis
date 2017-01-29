@@ -4,7 +4,18 @@
 
 
 } 
+
+@media screen and (min-width: 320px) and (max-width:620px){ 
 #submitbtn
 {
-margin: -50px 50% 2%;
+margin: -50px 25% 2%;
 }
+}
+
+@media screen and (min-width: 621px) { 
+#submitbtn
+{
+margin: -50px 46% 2%;
+}
+}
+
