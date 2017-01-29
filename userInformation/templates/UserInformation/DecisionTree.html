@@ -664,7 +664,7 @@
                     <div style="margin: 0% 0%">
 
                         <div class="col-md-5">
-                            <p><strong>Platele:</strong> Select your Platelet range from the given ranges.
+                            <p><strong>Platelet:</strong> Select your Platelet range from the given ranges.
                             </p>
                         </div>
                         <div class="col-md-7">
@@ -729,6 +729,16 @@
         </div>
         <input id="submitbtn"  type="Submit" value="Submit Your Report!" class="btn btn-primary disabled "/>
     </form>
+
+   <script>
+    $(function () {
+      if(document.getElementsByName('Platelet').checked) {
+    $('#submitbtn').removeClass('disabled');
+} 
+        
+
+    });
+    </script>
    
 
 {% endblock %}
