@@ -49,7 +49,7 @@
                                 <div class="col-lg-6">
                                     <div class="input-group">
       <span class="input-group-addon">
-        <input type="radio" aria-label="..." value="n" id="radio2" name="headache">
+        <input type="radio" aria-label="..." value="n" id="radio1" name="headache">
       </span>
                                         <label class="form-control" aria-label="..."
                                                style="text-align: center; width: 50px">No</label>
@@ -732,8 +732,8 @@
 
    <script>
     $(function () {
-        var check =document.getElementsByName('Platelet');
-      if(document.getElementsByName('Platelet').checked) {
+        var check =document.getElementsById('#radio1');
+      if(document.getElementsById('#radio1').checked) {
     $('#submitbtn').removeClass('disabled');
 } 
         
