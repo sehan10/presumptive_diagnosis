@@ -9,12 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'Img/logo.ico' %}">
+	<link href="{% static 'css/CustomizeCSS.css' %}" rel="stylesheet">
     <style>
-        .FeaturePara {
-
-            font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
-            font-size: 20px;
-        }
+       
     </style>
     <title>Presumptive Diagnosis</title>
 
@@ -26,7 +23,7 @@
             text ="";
             i=0;
             Parents = this.location.pathname;
-            if(Parents.indexOf('home')>0)
+            if(Parents.indexOf('Home')>0)
             {
                 index =Parents.indexOf("home");
                Split = index;
@@ -56,11 +53,7 @@
         });
     </script>
     <style>
-        .Topmargin {
-            margin-top: 30px;
-            margin-bottom: 30px;
-
-        }
+       
     </style>
 
 
@@ -73,29 +66,7 @@
     <!--[if lt IE 9]><script src="{% static 'js/ie8-responsive-file-warning.js'%}"></script><![endif]-->
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
     <style>
-        .FPara {
-            font-family: Cambria;
-            font-size: 20px;
-
-        }
-
-        .FeatureRightImage {
-            border-radius: 10px;
-            box-shadow: 7px 7px 10px #888888;
-
-        }
-
-        .FeatureLeftImage {
-            border-radius: 10px;
-            box-shadow: -7px 7px 10px #888888;
-
-        }
-
-        .TitleFont {
-            font-family: "Times New Roman";
-			font-size: 15px;
-
-        }
+       
 
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
