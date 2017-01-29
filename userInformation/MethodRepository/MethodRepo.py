@@ -146,7 +146,7 @@ class MethodCalling:
             AttributesName = lisst[2]
             accuracy, Predict = instance.execute(attributes)
         return accuracy, prediction
-
+    #Need to validate it !! Application Crash !!#
     def respone_Combo(self, request):
         accuracy, outputs = self.CallingAll(request)
         add = 0

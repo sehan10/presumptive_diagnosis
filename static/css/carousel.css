@@ -38,9 +38,11 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
+@media screen and (min-width: 320px) and (max-width:620px) {
 .carousel {
-  height: 500px;
+  height: 200px;
   margin-bottom: 60px;
+}
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -48,17 +50,57 @@ body {
 }
 
 /* Declare heights because of positioning of img element */
+@media screen and (min-width: 320px) and (max-width:620px) {
+.carousel .item {
+  height: 200px;
+  background-color: #777;
+
+}
+}
+@media screen and (min-width: 320px) and (max-width:620px) {
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 200px;
+
+}
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+
+
+
+/* Declare heights because of positioning of img element */
+@media screen and (min-width: 621px) {
+.carousel {
+  height: 200px;
+  margin-bottom: 60px;
+}
+}
+
+@media screen and (min-width: 621px) {
 .carousel .item {
   height: 500px;
   background-color: #777;
+
 }
+}
+@media screen and (min-width: 621px) {
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 500px;
+
 }
+}
+
 
 
 /* MARKETING CONTENT
