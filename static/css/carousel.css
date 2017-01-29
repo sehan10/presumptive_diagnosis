@@ -78,7 +78,7 @@ body {
 /* Declare heights because of positioning of img element */
 @media screen and (min-width: 621px) {
 .carousel {
-  height: 200px;
+  height: 500px;
   margin-bottom: 60px;
 }
 }
