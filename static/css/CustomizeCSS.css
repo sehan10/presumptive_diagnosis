@@ -48,6 +48,13 @@ margin: -50px 44% 2%;
             box-shadow: -7px 7px 10px #888888;
 
         }
+		@media screen and (min-width: 0px) and (max-width:319px) {
+        .TitleFont {
+            font-family: "Times New Roman";
+			font-size: 12px;
+
+        }
+        }
         @media screen and (min-width: 320px) and (max-width:500px) {
         .TitleFont {
             font-family: "Times New Roman";
